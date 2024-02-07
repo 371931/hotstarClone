@@ -1,37 +1,33 @@
-import React from "react";
+import React,{useState} from "react";
 import "./Section3.css";
-import DoneIcon from '@mui/icons-material/Done';
+import CardSec3 from "./CardSec3/CardSec3"; 
+import LabelImg1 from "../../assets/images/ImagelabelPho1.png";
+import LabelImg2 from "../../assets/images/Imagebg2.png";
 
 export default function Section3() {
+
+    const [btnClass,upBtnClass] = useState(false);
+
+    function onCli(){
+        upBtnClass(btnClass ? false : true);
+    }
+
     return (
         <section className="section3">
-            <h1>Choose Your Plan</h1>
+            <p className="headSec3">Choose Your Plan</p>
             <p>Switch or cancel* anytime.</p>
             <div className="toggle">
-                <div className="toggler">
-                    <button>Disney Bundle</button>
-                    <button>Disney+</button>
-                </div>
+                <button onClick={onCli} className={!btnClass && "toggi"}>Disney Bundle</button>
+                <button onClick={onCli} className={btnClass && "toggi"}>Disney+</button>
             </div>
             <div className="cards">
-                <div className="carded">
-                    <div className="detailssec3">
-                        <div className="logosec3"></div>
-                        <div className="tecsec3">Duo Basic <div>With Ads</div></div>
-                        <div className="planList">
-                            <div className="itemsec3">
-                                <DoneIcon /><div>Thousands of shows, movies, and Originals on Disney+ and Hulu</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="findetails">
-                        
-                    </div>
-                </div>
+                <CardSec3 labelPhoto={LabelImg2} classname="imgSiz" lcontent={["Thousands of shows, movies, and Originals on Disney+ and Hulu"]} price="$9.99" subhead="Duo Basic" adds="With Ads"/>
+                <CardSec3 labelPhoto={LabelImg1} lcontent={["Thousands of shows, movies, and Originals on Disney+ and Hulu","Live sports and Originals on ESPN+"]} price="$12.99" subhead="Trio Basic" adds="With Ads"/>
+                <CardSec3 labelPhoto={LabelImg1} lcontent={["Thousands of shows, movies, and Originals on Disney+ and Hulu","Live sports and Originals on ESPN+","Downloads to watch on-the-go"]} price="$19.99" subhead="Trio Premium" adds="No Ads on Disney+ & Hulu"/>
             </div>
 
-            <p>*Effective at the end of the billing period. Terms apply.</p>
-            <p>Terms apply</p>
+            <p className="p1sec3">*Effective at the end of the billing period. Terms apply.</p>
+            <p className="p2sec3">Terms apply</p>
         </section>
     );
 }

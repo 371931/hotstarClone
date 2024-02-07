@@ -11,6 +11,25 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #040714;
+  scrollbar-width: thin;
+}
+
+body::-webkit-scrollbar {
+  width: 0px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+
+body::-moz-scrollbar {
+  width: 0.5em;
+}
+
+body::-moz-scrollbar-thumb {
+  background-color: transparent;
 }
 
 code {
