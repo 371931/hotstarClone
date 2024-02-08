@@ -59,6 +59,11 @@
 
 .toggi{
     background-color: #0063E5 !important;
+    transition: all .3s ease-in-out;
+}
+
+.toggi:hover{
+    box-shadow: inset 0px 0px 0px 120px rgba(0, 0, 0, 0.1);
 }
 
 .p1sec3{

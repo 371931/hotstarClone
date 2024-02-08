@@ -8,8 +8,8 @@ export default function Items(props) {
             <img src={props.src} alt="" />
             <p className="heading">{props.heading}</p>
             <ul>
-                {props.listContent && props.listContent.map((val)=>{
-                return <li>{val}</li>})}
+                {props.listContent && props.listContent.map((val,i)=>{
+                return <li key={i}>{val}</li>})}
             </ul>
         </div>
     )

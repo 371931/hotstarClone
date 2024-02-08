@@ -1,0 +1,67 @@
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px;
+}
+
+footer > img{
+    width: 79px;
+    height: 43px;
+}
+
+footer > .foot{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: #C0C0C0;
+}
+
+.foot > p{
+    font-size: 12px !important;
+    line-height: 22px;
+    letter-spacing: 0.2px;
+    cursor: pointer;
+}
+
+.foot > p:hover{
+    color: #F9F9F9;
+}
+
+.foot1 > .languages{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.foot1 > .languages > select{
+    width: 92px;
+    height: 22px;
+    padding-left: 22px;
+    color: #C0C0C0;
+    outline: none;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.foot1 > .languages > select > option{
+    color: black!important;
+    font-size: 12px;
+    line-height: 22px;
+}
+
+.foot3{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 12px;
+    line-height: 22px;
+    color: #C0C0C0;
+}
+
+.foot3 > div:first-child,div:last-child{
+    cursor: default;
+}

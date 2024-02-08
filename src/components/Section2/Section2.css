@@ -21,6 +21,10 @@
     gap: 20px;
 }
 
+.navsec2 > ul > li{
+    cursor: pointer;
+} 
+
 .navsec2 > ul > li:first-child{
     position: relative;
 }
